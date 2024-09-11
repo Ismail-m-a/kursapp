@@ -1,0 +1,242 @@
+/* General container styling */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Responsive columns */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  
+  .col-md-6 {
+    width: 50%;
+  }
+  
+  .col-lg-4 {
+    width: 33.33%;
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-6 {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .col-lg-4 {
+      width: 100%;
+    }
+  }
+  
+  /* Card styles */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-img-top {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px; 
+    object-fit: contain; 
+    cursor: pointer;
+    
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.card-text {
+    color: #555;
+}
+  
+  /* Button styles */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+  
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+  
+.btn-info:hover {
+    background-color: #138496;
+}
+  
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+  
+.btn-success:hover {
+    background-color: #218838;
+}
+  
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+  
+.btn-danger:hover {
+    background-color: #c82333;
+}
+  
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+  
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+  
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    overflow-y: auto; 
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1200;
+}
+  
+  .modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px; 
+    cursor: pointer;
+    transform: translateX(100%);
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+  }
+  
+  .modal-body img {
+    width: 100%;
+    max-height: 300px; 
+    object-fit: contain; 
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+
+  /* BookList.css */
+.book-list-header {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.book-list-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.book-list-header p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.book-list-header strong {
+  color: #ffe600;
+  font-size: 1.4rem;
+}
+
+.book-list-header p br {
+  margin-bottom: 10px;
+}
+
+  
+  /* Modal responsive for mobile */
+  @media (max-width: 576px) {
+    .modal-content {
+      max-width: 90%;
+      margin: 10px;
+    }
+  }
+  
+  /* Scrollable modal content */
+  .modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
